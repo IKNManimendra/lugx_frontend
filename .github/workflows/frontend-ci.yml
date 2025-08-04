@@ -37,4 +37,5 @@ jobs:
           docker push $IMAGE_NAME:$VERSION
 
       - name: Print pushed image tag
-        run: echo "✅ Pushed Docker image: $IMAGE_NAME:$VERSION"
+        run: |
+          echo "✅ Pushed Docker image: $IMAGE_NAME:$VERSION"
