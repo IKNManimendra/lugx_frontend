@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lugx-frontend
+  namespace: lugx-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lugx-frontend
+  template:
+    metadata:
+      labels:
+        app: lugx-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: isurimani/lugx-assignment-service:frontend-v1.0.1
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
