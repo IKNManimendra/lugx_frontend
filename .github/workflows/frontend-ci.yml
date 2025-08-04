@@ -5,11 +5,7 @@ on:
     branches:
       main
     paths:
-      - '**.html'
-      - '**.css'
-      - '**.js'
-      - Dockerfile
-      - .github/workflows/frontend-ci.yml
+      - "**"
 
 env:
   IMAGE_NAME: isurimani/lugx-assignment-service
